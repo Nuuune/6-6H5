@@ -1,0 +1,81 @@
+html {
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+  font-family: '微软雅黑',Arial,Helvetica,'microsoft yahei',sans-serif;
+  background: #f2f2f2
+}
+* {
+    margin: 0;
+    padding: 0
+}
+body {
+    font-size: 12px;
+    color: #333
+}
+.main {
+    background-color: #000;
+    position: absolute;
+}
+@media screen and (orientation: portrait) {
+    .main {
+        -webkit-transform:rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+         width: 100vh;
+         height: 100vw;
+         overflow: hidden;
+         left: calc((100vw - 100vh) /2);
+         top: calc((100vh - 100vw) /2);
+    }
+    .time {
+      font-size: 80vw;
+    }
+    .icon {
+      left: calc( 50% - 7.5vw);
+      top: calc( 50% - 7.5vw);
+      width: 15vw;
+      height: 15vw;
+    }
+}
+@media screen and (orientation: landscape) {
+    .main {
+        width: 100vw;
+        height: 100vh;
+        -webkit-transform:rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0)
+    }
+    .time {
+      font-size: 80vh;
+    }
+    .icon {
+      left: calc( 50% - 7.5vh);
+      top: calc( 50% - 7.5vh);
+      width: 15vh;
+      height: 15vh;
+    }
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.flex-center{
+  justify-content: center;
+}
+/* time */
+@font-face {
+  font-family: 'rr-font';
+  src : url('../font/rr.ttf');
+}
+.time {
+  font-family: rr-font, sans-serif;
+  color: #f8be02;
+}
+.icon {
+  position: absolute;
+}
