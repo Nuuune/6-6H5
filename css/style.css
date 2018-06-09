@@ -13,6 +13,9 @@ body {
     font-size: 12px;
     color: #333
 }
+.show {
+  opacity: 1;
+}
 .main {
     background-color: #000;
     position: absolute;
@@ -38,6 +41,27 @@ body {
       width: 15vw;
       height: 15vw;
     }
+    .bg-main {
+      background-size: 100vh 100vw !important;
+    }
+    .btns {
+      width: 100vh;
+      bottom: 13vw;
+    }
+    .btns > div {
+      height: 5vw;
+      width: 15vw;
+      background-size: 15vw 5vw;
+    }
+    .btns > div + div {
+      margin-left: 5vw;
+    }
+    .btn-start {
+      left: calc( 50% - 12.5vw);
+      top: calc( 50% - 12.5vw);
+      width: 25vw;
+      height: 25vw;
+    }
 }
 @media screen and (orientation: landscape) {
     .main {
@@ -57,6 +81,27 @@ body {
       width: 15vh;
       height: 15vh;
     }
+    .bg-main {
+      background-size: 100vw 100vh !important;
+    }
+    .btns {
+      width: 100vw;
+      bottom: 13vh;
+    }
+    .btns > div {
+      height: 5vh;
+      width: 15vh;
+      background-size: 15vh 5vh;
+    }
+    .btns > div + div {
+      margin-left: 5vh;
+    }
+    .btn-start {
+      left: calc( 50% - 12.5vh);
+      top: calc( 50% - 12.5vh);
+      width: 25vh;
+      height: 25vh;
+    }
 }
 .flex{
   display: flex;
@@ -67,10 +112,13 @@ body {
 .flex-center{
   justify-content: center;
 }
+.flex-row {
+  flex-direction: row;
+}
 /* time */
 @font-face {
   font-family: 'rr-font';
-  src : url('../font/rr.ttf');
+  src : url('/font/RR.ttf');
 }
 .time {
   font-family: rr-font, sans-serif;
@@ -78,4 +126,36 @@ body {
 }
 .icon {
   position: absolute;
+}
+/* 引导跳转页 */
+.bg-main {
+  background: url('/imgs/bg_main.png') no-repeat;
+  opacity: 0;
+}
+.btn_agin {
+  background: url('/imgs/btn_agin.png') no-repeat;
+}
+.btn_more {
+  background: url('/imgs/btn_more.png') no-repeat;
+}
+.btns {
+  position: absolute;
+}
+/* video */
+.video-wrap {
+  position: absolute;
+  width: 100vw;
+  overflow: hidden;
+  height: 100vh;
+}
+video {
+  object-fit: contain;
+  object-position: 50% 50%;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+}
+.btn-start {
+  position: absolute;
+  color: #fff;
 }
