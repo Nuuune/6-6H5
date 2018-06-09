@@ -4,24 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
   <title>test2</title>
+  <script src="https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js"></script>
+  <script>
+    WebFont.load({
+      custom: {
+        families: ['rr-font']
+      }
+    });
+  </script>
+  <style>
+    @font-face {
+      font-family: 'rr-font';
+      src : url('/font/RR.ttf');
+    }
+  </style>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <!-- <div id="app"></div> -->
-  <div class="video-wrap" id="vpage">
+  <div id="app"></div>
+  <div class="video-wrap hidden" id="vpage">
     <video id="myvideo" src="/videos/01.mp4" preload="auto" x-webkit-airplay="true" x5-playsinline="true" webkit-playsinline="true" playsinline="true"></video>
   </div>
-  <div class="main" style="background-color: transparent;">
+  <div class="main hidden" id="vbtn">
     <div id="playBtn" style="display:block;" class="btn-start">
-      <span>bofang</span>
+      <span>play</span>
     </div>
   </div>
-  <!-- <div id="mpage" class="main bg-main">
+  <div id="mpage" class="main bg-main hidden">
     <div class="btns flex flex-row flex-center">
-      <div class="btn_agin"></div>
+      <div class="btn_agin" onclick="window.location.reload()"></div>
       <div class="btn_more"></div>
     </div>
-  </div> -->
+  </div>
 </body>
 <script src="/js/PicTimer.js"></script>
 <script src="/js/main.js"></script>

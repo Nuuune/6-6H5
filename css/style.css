@@ -14,7 +14,12 @@ body {
     color: #333
 }
 .show {
-  opacity: 1;
+  opacity: 1 !important;
+  z-index: 999;
+}
+.hidden {
+  opacity: 0 !important;
+  display: none !important;
 }
 .main {
     background-color: #000;
@@ -116,10 +121,6 @@ body {
   flex-direction: row;
 }
 /* time */
-@font-face {
-  font-family: 'rr-font';
-  src : url('/font/RR.ttf');
-}
 .time {
   font-family: rr-font, sans-serif;
   color: #f8be02;
@@ -129,7 +130,7 @@ body {
 }
 /* 引导跳转页 */
 .bg-main {
-  background: url('/imgs/bg_main.png') no-repeat;
+  background: url('/imgs/bg_main.jpg') no-repeat;
   opacity: 0;
 }
 .btn_agin {
