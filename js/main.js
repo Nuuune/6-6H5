@@ -60,6 +60,7 @@
     let video = document.getElementById("myvideo"); // video element
     let vbtn = document.getElementById("vbtn"); // video Btns wrap
     let playBtn = document.getElementById("playBtn"); // video play btn
+    let aginBtn = document.getElementById("aginBtn"); // video play btn
     let picTimer = new PicTimer(allImags.slice(0,4), 5);
 
     picTimer.run(app, ()=> {
@@ -71,14 +72,24 @@
     playBtn.addEventListener("click", function(){
       video.play();
       hidden(vbtn);
-    },false)
+    },false);
 
     // 播放结束 隐藏video
     video.addEventListener("ended", function(){
       hidden(vpage);
       hidden(video);
       show(mainPage);
-    }, false)
+    }, false);
+
+    // 重播按钮事件
+    aginBtn.addEventListener("click", function(){
+      show(vpage);
+      show(video);
+      hidden(mainPage);
+      video.currentTime = 0;
+      video.play();
+    }, false);
+
   }
 
 
