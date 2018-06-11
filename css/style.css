@@ -150,7 +150,7 @@ body {
   height: 100vh;
 }
 video {
-  object-fit: contain;
+  object-fit: fill;
   object-position: 50% 50%;
   pointer-events: none;
   width: 100vw;

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-  <title>test2</title>
+  <title>“我爱你”，从未改变</title>
+  <!-- 页面设计：cp | 页面制作：cp | 创建：2018-06-11  -->
   <script src="https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js"></script>
   <script>
     WebFont.load({
@@ -15,28 +16,61 @@
   <style>
     @font-face {
       font-family: 'rr-font';
-      src : url('/font/RR.ttf');
+      src : url('https://game.gtimg.cn/images/game/cp/a20180610love/font/RR.ttf');
     }
   </style>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- 计数器app开始 -->
   <div id="app"></div>
+  <!-- 计数器app结束 -->
+  <!-- 视频开始 -->
   <div class="video-wrap hidden" id="vpage">
-    <video id="myvideo" src="/videos/01.mp4" preload="auto" x-webkit-airplay="true" x5-playsinline="true" webkit-playsinline="true" playsinline="true"></video>
+    <video class="my-video" id="myvideo"  preload="auto" x-webkit-airplay="true" x5-playsinline="true" webkit-playsinline="true" playsinline="true"></video>
   </div>
   <div class="main hidden" id="vbtn">
-    <div id="playBtn" style="display:block;" class="btn-start">
-      <span>play</span>
+    <div id="play-btn" onclick="PTTSendClick('btn','start','开始播放');" style="display:block;" class="btn-start">
+      <img class="icon" src="imgs/play.png">
     </div>
   </div>
+  <!-- 视频结束 -->
+  <!-- 最终大图页开始 -->
   <div id="mpage" class="main bg-main hidden">
     <div class="btns flex flex-row flex-center">
-      <div class="btn_agin" id="aginBtn"></div>
-      <div class="btn_more"></div>
+      <div class="btn_agin" onclick="PTTSendClick('btn','agin','重新播放');" id="agin-btn"></div>
+      <div class="btn_more" id="more-btn"></div>
     </div>
   </div>
+  <!-- 最终大图页结束 -->
+  <script src="//ossweb-img.qq.com/images/spiderMediaData/game_new/mediaURLData.js"></script>
+  <script src="/js/PicTimer.js"></script>
+  <script src="/js/main.js"></script>
+  <!-- <script src="//game.gtimg.cn/images/js/2018foot/foot.js"></script> -->
+  <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
+  <script>
+  //统计组件，
+    var setSite={ //设置网站属性
+        siteType:"a20180610love", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
+        pageType:"“我爱你”，从未改变", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
+        pageName:"“我爱你”，从未改变", //必填项:页面中文名
+        project:"", //选填项:如果是官网模块则是必填;按照模块内容，填写固定的对应值;原生官网base;微社区ingame;同人站doujin;赛事match;故事站story;文化站history;粉丝站fans;爆料站coming;论坛bbs;
+        osact:0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
+        stayTime:0, //选填项:是否需要统计停留时长boolean；默认是0
+    };
+    if(typeof(pgvMain)=='function')pgvMain();//千万不能忘记！
+  </script>
+  <script src="//ossweb-img.qq.com/images/js/TGMobileShare/TGMobileShare.min.js"></script>
+  <script>
+  //分享组件
+    TGMobileShare({
+    shareTitle:'“我爱你”，从未改变', //不设置或设置为空时，页面有title，则调取title
+    shareDesc:'热爱，是我们对竞技唯一的告白！', //不设置或设置为空时，页面有Description，则调取Description
+    shareImgUrl:'https://game.gtimg.cn/images/game/cp/a20180610love/imgs/share-icon.jpg', //分享图片尺寸200*200，且填写绝对路径
+    shareLink:'', //分享链接要跟当前页面同域名(手Q分享有这个要求) ,不设置或设置为空时，默认调取当前URL
+    actName:'a20151127tgmsdemo' //点击流命名，用于统计分享量，专题一般采用目录名称如a20151029demo
+    });
+  </script>
 </body>
-<script src="/js/PicTimer.js"></script>
-<script src="/js/main.js"></script>
 </html>
